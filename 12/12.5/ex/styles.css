@@ -1,0 +1,22 @@
+#gallery {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+#gallery a {
+    display: block;
+    width: 100px;
+    margin: 10px;
+}
+#gallery a img {
+    text-align: center;
+    width: 100%;
+}
+#gallery-item {
+    display: flex;
+    justify-content: center;
+}
+#gallery-item img {
+    display: block;
+    margin: 10px;
+}

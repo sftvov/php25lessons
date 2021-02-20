@@ -1,0 +1,27 @@
+section#gallery_item {
+    width: 300px;
+    margin: 0px auto;
+}
+img.image {
+    display: block;
+    width: 100%;
+}
+div#overlay {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+div#overlay form {
+    margin: auto;
+    padding: 20px;
+    border: 2px solid black;
+    background-color: white;
+}
+span.error {
+    font-size: smaller;
+    color: red;
+}

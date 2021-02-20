@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Фронтенд</title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <script src="ajaxloader.js" type="text/javascript"></script>
+        <script src="image.js" type="text/javascript"></script>
+        <script src="login.js" type="text/javascript"></script>
+        <script src="comments.js" type="text/javascript"></script>
+        <script src="add.js" type="text/javascript"></script>
+        <script src="delete.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <h1>Фронтенд</h1>
+        <section id="gallery_item"></section>
+    </body>
+</html>
+<script type="text/javascript">
+    const domain = 'http://localhost/';
+    const imageID = 2;
+
+    function showError(status) {
+        switch (status) {
+            case 404:
+                s = 'Запрошенный интернет-адрес не существует';
+                break;
+            case 403:
+                s = 'Отсутствуют права на доступ к данным';
+                break;
+            case 405:
+                s = 'Метод не поддерживается';
+                break;
+            case 503:
+                s = 'Внутренняя ошибка сервера';
+                break;
+            default:
+                s = 'Ошибка ' + status;
+        }
+        window.alert(s);
+    }
+
+    const cont = document.getElementById('gallery_item');
+
+    const cImage = new PhImage(imageID, cont);
+    const cAddEdit = new PhAddEdit(imageID);
+    const cDelete = new PhDelete(imageID);
+    let cLogin, cComments;
+</script>
